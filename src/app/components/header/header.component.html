@@ -3,11 +3,22 @@
     <span>Nosy Questions </span>
     <span class="version">Beta 1.0</span>
 
-    <diV class="donate">
-      Support this software
-      <a mat-flat-button color="accent" href="https://www.paypal.com/donate?hosted_button_id=QMTCSHV5RNS8C"
-        target="_blank">Donate with PayPal</a>
-    </diV>
+    <div id="donate-button-container">
+<div id="donate-button"></div>
+<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+<script>
+PayPal.Donation.Button({
+env:'production',
+hosted_button_id:'RUR9BXHHABDLJ',
+image: {
+src:'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
+alt:'Donate with PayPal button',
+title:'PayPal - The safer, easier way to pay online!',
+}
+}).render('#donate-button');
+</script>
+</div>
+
 
     <span class="example-spacer"></span>
 
